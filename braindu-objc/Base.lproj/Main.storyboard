@@ -1,25 +1,124 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6162" systemVersion="14A238h" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ugx-Bg-nQj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6160"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - Braindu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyU-fI-rWt">
+                                <rect key="frame" x="423" y="330" width="177" height="161"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nodeImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="orC-a5-qSC">
+                                        <rect key="frame" x="7" y="5" width="163" height="98"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Object Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tn-NV-4w3">
+                                        <rect key="frame" x="45" y="120" width="88" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nej-JN-68S">
+                                <rect key="frame" x="699" y="64" width="326" height="704"/>
+                                <subviews>
+                                    <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BUI-WN-Xlh">
+                                        <rect key="frame" x="6" y="0.0" width="320" height="704"/>
+                                        <color key="backgroundColor" red="1" green="0.50980392159999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </webView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  enter url or search term" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0UV-fg-0LA">
+                                        <rect key="frame" x="6" y="0.0" width="320" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="done"/>
+                                    </textField>
+                                    <tabBar contentMode="scaleToFill" fixedFrame="YES" itemPositioning="centered" translatesAutoresizingMaskIntoConstraints="NO" id="75Q-6j-GWd">
+                                        <rect key="frame" x="6" y="655" width="331" height="49"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <items>
+                                            <tabBarItem title="" image="back-32.png" selectedImage="back-32.png" id="feu-1i-dhZ">
+                                                <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                                            </tabBarItem>
+                                            <tabBarItem title="" image="forward-32.png" selectedImage="forward-32.png" id="d5o-SF-q3e">
+                                                <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                                                <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-8"/>
+                                            </tabBarItem>
+                                            <tabBarItem title="" image="reload-32.png" selectedImage="reload-32.png" id="afH-0O-OWh">
+                                                <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                                            </tabBarItem>
+                                            <tabBarItem title="" image="delete_sign-32.png" selectedImage="delete_sign-32.png" id="LTn-RE-P8T">
+                                                <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                                            </tabBarItem>
+                                        </items>
+                                        <color key="selectedImageTintColor" red="1" green="0.50980392159999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tabBar>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search-512.png" translatesAutoresizingMaskIntoConstraints="NO" id="eVu-Ls-2HQ">
+                                        <rect key="frame" x="11" y="7" width="30" height="29"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Braindu" id="Wgi-vK-zUA"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="backButton" destination="feu-1i-dhZ" id="1Rm-J8-7ti"/>
+                        <outlet property="forwardButton" destination="d5o-SF-q3e" id="rPF-x6-pcB"/>
+                        <outlet property="nodeContainer" destination="gyU-fI-rWt" id="fyF-YS-UEb"/>
+                        <outlet property="nodeImageRectLandscape" destination="orC-a5-qSC" id="8QI-oE-rUe"/>
+                        <outlet property="nodeLabel" destination="9tn-NV-4w3" id="Ecl-Jp-xIV"/>
+                        <outlet property="reloadButton" destination="afH-0O-OWh" id="Qu6-CU-lYc"/>
+                        <outlet property="stopButton" destination="LTn-RE-P8T" id="8ls-op-MoR"/>
+                        <outlet property="textField" destination="0UV-fg-0LA" id="8AX-qB-Zum"/>
+                        <outlet property="webView" destination="BUI-WN-Xlh" id="wQJ-Tp-d9n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="831" y="141"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mc2-aW-fcW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ugx-Bg-nQj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="48h-14-F9e">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5TA-Mq-UEM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9KK-lK-60g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-126" y="383"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back-32.png" width="32" height="32"/>
+        <image name="delete_sign-32.png" width="32" height="32"/>
+        <image name="forward-32.png" width="32" height="32"/>
+        <image name="nodeImage.png" width="454" height="340"/>
+        <image name="reload-32.png" width="32" height="32"/>
+        <image name="search-512.png" width="512" height="512"/>
+    </resources>
 </document>

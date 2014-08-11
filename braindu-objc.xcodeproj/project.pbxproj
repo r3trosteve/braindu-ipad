@@ -14,6 +14,17 @@
 		0C5C47BE1998FAA60031D603 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C47BC1998FAA60031D603 /* Main.storyboard */; };
 		0C5C47C01998FAA60031D603 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C47BF1998FAA60031D603 /* Images.xcassets */; };
 		0C5C47CC1998FAA70031D603 /* braindu_objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C47CB1998FAA70031D603 /* braindu_objcTests.m */; };
+		0C5C47D61998FB7D0031D603 /* nodeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C47D51998FB7D0031D603 /* nodeImage.png */; };
+		0C5C47DB199912110031D603 /* search-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C47DA199912110031D603 /* search-32.png */; };
+		0C5C47DD199913B60031D603 /* back-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C47DC199913B60031D603 /* back-128.png */; };
+		0C5C47DF199913C40031D603 /* forward-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C47DE199913C40031D603 /* forward-128.png */; };
+		0C5C47E1199913D20031D603 /* reload-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C47E0199913D20031D603 /* reload-128.png */; };
+		0C5C47E3199913F10031D603 /* delete_sign-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C47E2199913F10031D603 /* delete_sign-128.png */; };
+		0C5C47E5199914EC0031D603 /* delete_sign-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C47E4199914EC0031D603 /* delete_sign-32.png */; };
+		0C5C47E7199915030031D603 /* back-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C47E6199915030031D603 /* back-32.png */; };
+		0C5C47E9199915150031D603 /* forward-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C47E8199915150031D603 /* forward-32.png */; };
+		0C5C47EB199915220031D603 /* reload-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C47EA199915220031D603 /* reload-32.png */; };
+		0C6306E319991852009D5B4B /* search-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6306E219991852009D5B4B /* search-512.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +51,17 @@
 		0C5C47C51998FAA70031D603 /* braindu-objcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "braindu-objcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C5C47CA1998FAA70031D603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C5C47CB1998FAA70031D603 /* braindu_objcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = braindu_objcTests.m; sourceTree = "<group>"; };
+		0C5C47D51998FB7D0031D603 /* nodeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nodeImage.png; sourceTree = "<group>"; };
+		0C5C47DA199912110031D603 /* search-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-32.png"; sourceTree = "<group>"; };
+		0C5C47DC199913B60031D603 /* back-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-128.png"; sourceTree = "<group>"; };
+		0C5C47DE199913C40031D603 /* forward-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-128.png"; sourceTree = "<group>"; };
+		0C5C47E0199913D20031D603 /* reload-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reload-128.png"; sourceTree = "<group>"; };
+		0C5C47E2199913F10031D603 /* delete_sign-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete_sign-128.png"; sourceTree = "<group>"; };
+		0C5C47E4199914EC0031D603 /* delete_sign-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete_sign-32.png"; sourceTree = "<group>"; };
+		0C5C47E6199915030031D603 /* back-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-32.png"; sourceTree = "<group>"; };
+		0C5C47E8199915150031D603 /* forward-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-32.png"; sourceTree = "<group>"; };
+		0C5C47EA199915220031D603 /* reload-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reload-32.png"; sourceTree = "<group>"; };
+		0C6306E219991852009D5B4B /* search-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-512.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +110,7 @@
 				0C5C47BC1998FAA60031D603 /* Main.storyboard */,
 				0C5C47BF1998FAA60031D603 /* Images.xcassets */,
 				0C5C47B61998FAA60031D603 /* braindu_objc.xcdatamodeld */,
+				0C5C47D71998FB840031D603 /* Images */,
 				0C5C47AF1998FAA60031D603 /* Supporting Files */,
 			);
 			path = "braindu-objc";
@@ -117,6 +140,32 @@
 				0C5C47CA1998FAA70031D603 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C5C47D71998FB840031D603 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0C5C47EC199915290031D603 /* Browser */,
+				0C5C47D51998FB7D0031D603 /* nodeImage.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		0C5C47EC199915290031D603 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				0C6306E219991852009D5B4B /* search-512.png */,
+				0C5C47EA199915220031D603 /* reload-32.png */,
+				0C5C47E8199915150031D603 /* forward-32.png */,
+				0C5C47E6199915030031D603 /* back-32.png */,
+				0C5C47E4199914EC0031D603 /* delete_sign-32.png */,
+				0C5C47E2199913F10031D603 /* delete_sign-128.png */,
+				0C5C47E0199913D20031D603 /* reload-128.png */,
+				0C5C47DE199913C40031D603 /* forward-128.png */,
+				0C5C47DC199913B60031D603 /* back-128.png */,
+				0C5C47DA199912110031D603 /* search-32.png */,
+			);
+			name = Browser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +217,7 @@
 				TargetAttributes = {
 					0C5C47AB1998FAA60031D603 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 9HNHHQLWA5;
 					};
 					0C5C47C41998FAA70031D603 = {
 						CreatedOnToolsVersion = 6.0;
@@ -199,8 +249,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C5C47E5199914EC0031D603 /* delete_sign-32.png in Resources */,
+				0C5C47E1199913D20031D603 /* reload-128.png in Resources */,
+				0C5C47DF199913C40031D603 /* forward-128.png in Resources */,
 				0C5C47BE1998FAA60031D603 /* Main.storyboard in Resources */,
+				0C5C47DD199913B60031D603 /* back-128.png in Resources */,
+				0C6306E319991852009D5B4B /* search-512.png in Resources */,
 				0C5C47C01998FAA60031D603 /* Images.xcassets in Resources */,
+				0C5C47EB199915220031D603 /* reload-32.png in Resources */,
+				0C5C47E3199913F10031D603 /* delete_sign-128.png in Resources */,
+				0C5C47E9199915150031D603 /* forward-32.png in Resources */,
+				0C5C47E7199915030031D603 /* back-32.png in Resources */,
+				0C5C47DB199912110031D603 /* search-32.png in Resources */,
+				0C5C47D61998FB7D0031D603 /* nodeImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +399,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "braindu-objc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -349,7 +412,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "braindu-objc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -410,6 +475,7 @@
 				0C5C47D11998FAA70031D603 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C5C47D21998FAA70031D603 /* Build configuration list for PBXNativeTarget "braindu-objcTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +484,7 @@
 				0C5C47D41998FAA70031D603 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
