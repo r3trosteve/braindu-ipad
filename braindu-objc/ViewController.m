@@ -7,7 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "BUObject.h"
+#import "BUDataSource.h"
+#import "BUUser.h"
+#import "BUChart.h"
+#import "BUCard.h"
+
 
 @interface ViewController () <UIWebViewDelegate, UITextFieldDelegate>
 
