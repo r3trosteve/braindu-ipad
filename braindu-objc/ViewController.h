@@ -32,6 +32,8 @@ typedef NS_ENUM(NSInteger, WebViewLoadState) {
 @property (strong, nonatomic) IBOutlet UITabBarItem *reloadButton;
 @property (strong, nonatomic) IBOutlet UITabBarItem *stopButton;
 
+@property (weak, nonatomic) NSMutableArray *objects;
+
 @property (nonatomic, assign) WebViewLoadState loadState;
 
 - (IBAction)fullscreenWebViewWasPressed:(id)sender;

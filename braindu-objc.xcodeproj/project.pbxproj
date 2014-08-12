@@ -25,6 +25,8 @@
 		0C5C47E9199915150031D603 /* forward-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C47E8199915150031D603 /* forward-32.png */; };
 		0C5C47EB199915220031D603 /* reload-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C47EA199915220031D603 /* reload-32.png */; };
 		0C6306E319991852009D5B4B /* search-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6306E219991852009D5B4B /* search-512.png */; };
+		0C682509199A67B0003D5459 /* BUCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C682508199A67B0003D5459 /* BUCard.m */; };
+		0C68250E199A69CC003D5459 /* BUDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C68250D199A69CC003D5459 /* BUDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,10 @@
 		0C5C47E8199915150031D603 /* forward-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-32.png"; sourceTree = "<group>"; };
 		0C5C47EA199915220031D603 /* reload-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reload-32.png"; sourceTree = "<group>"; };
 		0C6306E219991852009D5B4B /* search-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-512.png"; sourceTree = "<group>"; };
+		0C682507199A67B0003D5459 /* BUCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUCard.h; sourceTree = "<group>"; };
+		0C682508199A67B0003D5459 /* BUCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUCard.m; sourceTree = "<group>"; };
+		0C68250C199A69CC003D5459 /* BUDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUDataSource.h; sourceTree = "<group>"; };
+		0C68250D199A69CC003D5459 /* BUDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +111,8 @@
 			children = (
 				0C5C47B31998FAA60031D603 /* AppDelegate.h */,
 				0C5C47B41998FAA60031D603 /* AppDelegate.m */,
-				0C5C47B91998FAA60031D603 /* ViewController.h */,
-				0C5C47BA1998FAA60031D603 /* ViewController.m */,
+				0C68250A199A67B6003D5459 /* Models */,
+				0C68250B199A67C9003D5459 /* Controllers */,
 				0C5C47BC1998FAA60031D603 /* Main.storyboard */,
 				0C5C47BF1998FAA60031D603 /* Images.xcassets */,
 				0C5C47B61998FAA60031D603 /* braindu_objc.xcdatamodeld */,
@@ -166,6 +172,27 @@
 				0C5C47DA199912110031D603 /* search-32.png */,
 			);
 			name = Browser;
+			sourceTree = "<group>";
+		};
+		0C68250A199A67B6003D5459 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0C682507199A67B0003D5459 /* BUCard.h */,
+				0C682508199A67B0003D5459 /* BUCard.m */,
+				0C68250C199A69CC003D5459 /* BUDataSource.h */,
+				0C68250D199A69CC003D5459 /* BUDataSource.m */,
+			);
+			name = Models;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0C68250B199A67C9003D5459 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C5C47B91998FAA60031D603 /* ViewController.h */,
+				0C5C47BA1998FAA60031D603 /* ViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +307,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5C47B51998FAA60031D603 /* AppDelegate.m in Sources */,
+				0C682509199A67B0003D5459 /* BUCard.m in Sources */,
 				0C5C47B21998FAA60031D603 /* main.m in Sources */,
+				0C68250E199A69CC003D5459 /* BUDataSource.m in Sources */,
 				0C5C47BB1998FAA60031D603 /* ViewController.m in Sources */,
 				0C5C47B81998FAA60031D603 /* braindu_objc.xcdatamodeld in Sources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BUObject.h"
 
 @interface ViewController () <UIWebViewDelegate, UITextFieldDelegate>
 
@@ -16,7 +17,6 @@
 @end
 
 @implementation ViewController
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
