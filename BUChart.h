@@ -1,5 +1,5 @@
 //
-//  BUCard.h
+//  BUChart.h
 //  braindu-objc
 //
 //  Created by Steven Schofield on 12/08/2014.
@@ -10,17 +10,13 @@
 #import <UIKit/UIKit.h>
 
 @class BUUser;
-@class BUChart;
 
-@interface BUCard : NSObject
+@interface BUChart : NSObject
 
 @property (strong, nonatomic) NSString *idNumber;
-@property (nonatomic, strong) BUUser *user;
-@property (nonatomic, strong) BUChart *chart;
-
+ @property (nonatomic, strong) BUUser *user;
 @property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *note;
+@property (strong, nonatomic) NSString *description;
 @property (strong, nonatomic) UIImage *image;
-@property (strong, nonatomic) NSMutableArray *links;
 
 @end

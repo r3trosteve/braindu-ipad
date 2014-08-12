@@ -27,6 +27,8 @@
 		0C6306E319991852009D5B4B /* search-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6306E219991852009D5B4B /* search-512.png */; };
 		0C682509199A67B0003D5459 /* BUCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C682508199A67B0003D5459 /* BUCard.m */; };
 		0C68250E199A69CC003D5459 /* BUDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C68250D199A69CC003D5459 /* BUDataSource.m */; };
+		0C682511199A735F003D5459 /* BUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C682510199A735F003D5459 /* BUChart.m */; };
+		0C682514199A763A003D5459 /* BUUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C682513199A763A003D5459 /* BUUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,10 @@
 		0C682508199A67B0003D5459 /* BUCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUCard.m; sourceTree = "<group>"; };
 		0C68250C199A69CC003D5459 /* BUDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUDataSource.h; sourceTree = "<group>"; };
 		0C68250D199A69CC003D5459 /* BUDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUDataSource.m; sourceTree = "<group>"; };
+		0C68250F199A735F003D5459 /* BUChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUChart.h; sourceTree = "<group>"; };
+		0C682510199A735F003D5459 /* BUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChart.m; sourceTree = "<group>"; };
+		0C682512199A763A003D5459 /* BUUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUUser.h; sourceTree = "<group>"; };
+		0C682513199A763A003D5459 /* BUUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +183,10 @@
 		0C68250A199A67B6003D5459 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0C682512199A763A003D5459 /* BUUser.h */,
+				0C682513199A763A003D5459 /* BUUser.m */,
+				0C68250F199A735F003D5459 /* BUChart.h */,
+				0C682510199A735F003D5459 /* BUChart.m */,
 				0C682507199A67B0003D5459 /* BUCard.h */,
 				0C682508199A67B0003D5459 /* BUCard.m */,
 				0C68250C199A69CC003D5459 /* BUDataSource.h */,
@@ -307,10 +317,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5C47B51998FAA60031D603 /* AppDelegate.m in Sources */,
+				0C682514199A763A003D5459 /* BUUser.m in Sources */,
 				0C682509199A67B0003D5459 /* BUCard.m in Sources */,
 				0C5C47B21998FAA60031D603 /* main.m in Sources */,
 				0C68250E199A69CC003D5459 /* BUDataSource.m in Sources */,
 				0C5C47BB1998FAA60031D603 /* ViewController.m in Sources */,
+				0C682511199A735F003D5459 /* BUChart.m in Sources */,
 				0C5C47B81998FAA60031D603 /* braindu_objc.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
