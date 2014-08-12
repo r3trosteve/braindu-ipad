@@ -16,21 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyU-fI-rWt">
-                                <rect key="frame" x="423" y="330" width="177" height="161"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nodeImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="orC-a5-qSC">
-                                        <rect key="frame" x="7" y="5" width="163" height="98"/>
-                                    </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Object Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tn-NV-4w3">
-                                        <rect key="frame" x="45" y="120" width="88" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4qu-yU-WB1">
+                                <rect key="frame" x="-11" y="64" width="1036" height="704"/>
+                                <connections>
+                                    <segue destination="66w-mO-0N4" kind="embed" id="diF-ub-DdJ"/>
+                                </connections>
+                            </containerView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nej-JN-68S">
                                 <rect key="frame" x="699" y="64" width="326" height="704"/>
                                 <subviews>
@@ -91,9 +82,6 @@
                         <outlet property="backButton" destination="feu-1i-dhZ" id="1Rm-J8-7ti"/>
                         <outlet property="forwardButton" destination="d5o-SF-q3e" id="rPF-x6-pcB"/>
                         <outlet property="fullScreenButton" destination="kmd-Fg-v6a" id="XqQ-Nf-uu6"/>
-                        <outlet property="nodeContainer" destination="gyU-fI-rWt" id="fyF-YS-UEb"/>
-                        <outlet property="nodeImageRectLandscape" destination="orC-a5-qSC" id="8QI-oE-rUe"/>
-                        <outlet property="nodeLabel" destination="9tn-NV-4w3" id="Ecl-Jp-xIV"/>
                         <outlet property="reloadButton" destination="afH-0O-OWh" id="Qu6-CU-lYc"/>
                         <outlet property="searchIconImage" destination="eVu-Ls-2HQ" id="Tfb-DW-AoR"/>
                         <outlet property="stopButton" destination="LTn-RE-P8T" id="8ls-op-MoR"/>
@@ -124,6 +112,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9KK-lK-60g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-106" y="96"/>
+        </scene>
+        <!--Chart Area View Controller-->
+        <scene sceneID="mnG-aL-fAD">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="66w-mO-0N4" customClass="BUChartAreaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uCP-3U-N3j"/>
+                        <viewControllerLayoutGuide type="bottom" id="UQg-ot-Ozt"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ywZ-qc-G2W">
+                        <rect key="frame" x="0.0" y="0.0" width="1036" height="704"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7i-Oa-95L">
+                                <rect key="frame" x="60" y="55" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.23529411759999999" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lp6-gp-xvp">
+                                <rect key="frame" x="60" y="395" width="237" height="214"/>
+                                <color key="backgroundColor" red="1" green="0.50980392159999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mwu-BC-AKj">
+                                <rect key="frame" x="318" y="252" width="259" height="235"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.66274509800000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Irw-kM-lIH">
+                                <rect key="frame" x="337" y="65" width="154" height="167"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nodeImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="81N-24-Za0">
+                                        <rect key="frame" x="-3" y="0.0" width="160" height="101"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Object label that is long and covers three lines" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="154" translatesAutoresizingMaskIntoConstraints="NO" id="8Po-sH-lvR">
+                                        <rect key="frame" x="0.0" y="109" width="154" height="63"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ha9-20-YFF" appends="YES" id="iou-cr-Aur"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMP-ia-JyZ">
+                                <rect key="frame" x="0.0" y="647" width="238" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="completionLabel" destination="rMP-ia-JyZ" id="Mmq-Yj-P4m"/>
+                        <outlet property="draggingView" destination="Irw-kM-lIH" id="mFE-Y6-Mj3"/>
+                        <outlet property="oneView" destination="q7i-Oa-95L" id="TM2-7o-817"/>
+                        <outlet property="panRecognizer" destination="Ha9-20-YFF" id="aq5-IZ-HD6"/>
+                        <outlet property="threeView" destination="Mwu-BC-AKj" id="1oF-ix-fak"/>
+                        <outlet property="twoView" destination="Lp6-gp-xvp" id="EOd-5d-0Qm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c6B-RN-2Mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Ha9-20-YFF">
+                    <connections>
+                        <action selector="handlePanRecognizer:" destination="66w-mO-0N4" id="J4R-9h-5pm"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="800" y="1065"/>
         </scene>
     </scenes>
     <resources>

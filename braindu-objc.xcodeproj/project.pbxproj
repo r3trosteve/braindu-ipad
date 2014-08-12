@@ -29,6 +29,12 @@
 		0C68250E199A69CC003D5459 /* BUDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C68250D199A69CC003D5459 /* BUDataSource.m */; };
 		0C682511199A735F003D5459 /* BUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C682510199A735F003D5459 /* BUChart.m */; };
 		0C682514199A763A003D5459 /* BUUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C682513199A763A003D5459 /* BUUser.m */; };
+		0C682516199AB146003D5459 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C682515199AB146003D5459 /* UIKit.framework */; };
+		0C682518199AB14E003D5459 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C682517199AB14E003D5459 /* CoreGraphics.framework */; };
+		0C68251A199AB185003D5459 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C682519199AB185003D5459 /* Foundation.framework */; };
+		0C682521199AB336003D5459 /* UIView+ZSViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C68251E199AB336003D5459 /* UIView+ZSViewAdditions.m */; };
+		0C682522199AB336003D5459 /* UIGestureRecognizer+DraggingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C682520199AB336003D5459 /* UIGestureRecognizer+DraggingAdditions.m */; };
+		0C682525199AB51E003D5459 /* BUChartAreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C682524199AB51E003D5459 /* BUChartAreaViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +80,15 @@
 		0C682510199A735F003D5459 /* BUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChart.m; sourceTree = "<group>"; };
 		0C682512199A763A003D5459 /* BUUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUUser.h; sourceTree = "<group>"; };
 		0C682513199A763A003D5459 /* BUUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUUser.m; sourceTree = "<group>"; };
+		0C682515199AB146003D5459 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0C682517199AB14E003D5459 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0C682519199AB185003D5459 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0C68251D199AB336003D5459 /* UIView+ZSViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZSViewAdditions.h"; sourceTree = "<group>"; };
+		0C68251E199AB336003D5459 /* UIView+ZSViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZSViewAdditions.m"; sourceTree = "<group>"; };
+		0C68251F199AB336003D5459 /* UIGestureRecognizer+DraggingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+DraggingAdditions.h"; sourceTree = "<group>"; };
+		0C682520199AB336003D5459 /* UIGestureRecognizer+DraggingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+DraggingAdditions.m"; sourceTree = "<group>"; };
+		0C682523199AB51E003D5459 /* BUChartAreaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUChartAreaViewController.h; sourceTree = "<group>"; };
+		0C682524199AB51E003D5459 /* BUChartAreaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChartAreaViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +96,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C68251A199AB185003D5459 /* Foundation.framework in Frameworks */,
+				0C682518199AB14E003D5459 /* CoreGraphics.framework in Frameworks */,
+				0C682516199AB146003D5459 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +136,7 @@
 				0C5C47B31998FAA60031D603 /* AppDelegate.h */,
 				0C5C47B41998FAA60031D603 /* AppDelegate.m */,
 				0C68250A199A67B6003D5459 /* Models */,
-				0C68250B199A67C9003D5459 /* Controllers */,
+				0C68250B199A67C9003D5459 /* View Controllers */,
 				0C5C47BC1998FAA60031D603 /* Main.storyboard */,
 				0C5C47BF1998FAA60031D603 /* Images.xcassets */,
 				0C5C47B61998FAA60031D603 /* braindu_objc.xcdatamodeld */,
@@ -133,6 +151,8 @@
 			children = (
 				0C5C47B01998FAA60031D603 /* Info.plist */,
 				0C5C47B11998FAA60031D603 /* main.m */,
+				0C68251C199AB2ED003D5459 /* Libs */,
+				0C68251B199AB1AC003D5459 /* Frameworks */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -196,13 +216,44 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		0C68250B199A67C9003D5459 /* Controllers */ = {
+		0C68250B199A67C9003D5459 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0C682526199ABA98003D5459 /* Views */,
 				0C5C47B91998FAA60031D603 /* ViewController.h */,
 				0C5C47BA1998FAA60031D603 /* ViewController.m */,
+				0C682523199AB51E003D5459 /* BUChartAreaViewController.h */,
+				0C682524199AB51E003D5459 /* BUChartAreaViewController.m */,
 			);
-			name = Controllers;
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0C68251B199AB1AC003D5459 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C682519199AB185003D5459 /* Foundation.framework */,
+				0C682517199AB14E003D5459 /* CoreGraphics.framework */,
+				0C682515199AB146003D5459 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C68251C199AB2ED003D5459 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				0C68251D199AB336003D5459 /* UIView+ZSViewAdditions.h */,
+				0C68251E199AB336003D5459 /* UIView+ZSViewAdditions.m */,
+				0C68251F199AB336003D5459 /* UIGestureRecognizer+DraggingAdditions.h */,
+				0C682520199AB336003D5459 /* UIGestureRecognizer+DraggingAdditions.m */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		0C682526199ABA98003D5459 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +369,10 @@
 			files = (
 				0C5C47B51998FAA60031D603 /* AppDelegate.m in Sources */,
 				0C682514199A763A003D5459 /* BUUser.m in Sources */,
+				0C682521199AB336003D5459 /* UIView+ZSViewAdditions.m in Sources */,
 				0C682509199A67B0003D5459 /* BUCard.m in Sources */,
+				0C682525199AB51E003D5459 /* BUChartAreaViewController.m in Sources */,
+				0C682522199AB336003D5459 /* UIGestureRecognizer+DraggingAdditions.m in Sources */,
 				0C5C47B21998FAA60031D603 /* main.m in Sources */,
 				0C68250E199A69CC003D5459 /* BUDataSource.m in Sources */,
 				0C5C47BB1998FAA60031D603 /* ViewController.m in Sources */,
