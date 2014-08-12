@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+typedef NS_ENUM(NSInteger, WebViewLoadState) {
+    WebViewClosed               = 0,
+    WebViewMinimised            = 1,
+    WebViewMaximised            = 2
+};
+
+@interface ViewController : UIViewController <UITabBarDelegate>
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *fullScreenButton;
 
@@ -25,6 +31,8 @@
 @property (strong, nonatomic) IBOutlet UITabBarItem *forwardButton;
 @property (strong, nonatomic) IBOutlet UITabBarItem *reloadButton;
 @property (strong, nonatomic) IBOutlet UITabBarItem *stopButton;
+
+@property (nonatomic, assign) WebViewLoadState loadState;
 
 - (IBAction)fullscreenWebViewWasPressed:(id)sender;
 

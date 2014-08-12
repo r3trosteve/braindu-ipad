@@ -16,12 +16,15 @@
 @end
 
 @implementation ViewController
-    
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.webView.delegate = self;
+    self.loadState = WebViewMinimised;
+    
+    self.tabBar.delegate = self;
     self.textField.delegate = self;
     
     UIView *spacerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 10)];
@@ -34,23 +37,32 @@
     UIBarButtonItem *fullScreenBrowserButton = [[UIBarButtonItem alloc] initWithTitle:@"Full Screen" style:UIBarButtonItemStylePlain target:self action:@selector(fullscreenWebViewWasPressed:)];
     self.navigationItem.rightBarButtonItem = fullScreenBrowserButton;
     
+    for (UITabBarItem *tabBarItem in @[self.backButton, self.forwardButton, self.reloadButton, self.stopButton]) {
+        
+        tabBarItem.titlePositionAdjustment = UIOffsetMake(0.f, 50.f);
+    }
+    
     //self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicator];
     
     self.activityIndicator.hidden = YES;
+    
+    NSLog(@"Load state is:%ld", self.loadState);
 }
 
 #pragma mark - Objects
 
--(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [[event allTouches] anyObject];
-    CGPoint location = [touch locationInView:touch.view];
-    self.nodeContainer.center = location;
-}
+//-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+//    UITouch *touch = [[event allTouches] anyObject];
+//    CGPoint location = [touch locationInView:touch.view];
+//    self.nodeContainer.center = location;
+//}
+//
+//-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+//    [self touchesBegan:touches withEvent:event];
+//}
 
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self touchesBegan:touches withEvent:event];
-}
+
 
 #pragma mark - Web Browser
 
@@ -139,13 +151,6 @@
 }
 
 - (void) resetWebView {
-    [self.webView removeFromSuperview];
-    
-    UIWebView *newWebView = [[UIWebView alloc] init];
-    newWebView.delegate = self;
-    [self.view addSubview:newWebView];
-    
-    self.webView = newWebView;
     
     self.textField.text = nil;
     [self updateButtonsAndTitle];
@@ -187,6 +192,9 @@
     }];
     [self.navigationItem.rightBarButtonItem setTitle:@"Reduce"];
     [self.navigationItem.rightBarButtonItem setAction:@selector(reduceWebView:)];
+    self.loadState = WebViewMaximised;
+    
+    NSLog(@"Load state is:%ld", self.loadState);
 }
 
 - (void)reduceWebView:(UIWebView *)webView {
@@ -226,6 +234,8 @@
     
     [self.navigationItem.rightBarButtonItem setTitle:@"Full Screen"];
     [self.navigationItem.rightBarButtonItem setAction:@selector(resizeWebView:)];
+    self.loadState = WebViewMinimised;
+    NSLog(@"Load state is:%ld", self.loadState);
 }
 
 #pragma mark - Actions
@@ -236,6 +246,20 @@
 
 - (IBAction)reduceWebViewWasPressed:(id)sender {
     [self reduceWebView:self.webView];
+}
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    NSLog(@"Item title is %@", item.title);
+    if([item.title isEqualToString:@"back"]) {
+        // do something for this specific button
+    } else if ([item.title isEqualToString:@"forward"]) {
+        // do something for this specific button
+    } else if ([item.title isEqualToString:@"reload"]) {
+        // do something for this specific button
+    } else if ([item.title isEqualToString:@"stop"]) {
+        // do something for this specific button
+    }
 }
 
 
