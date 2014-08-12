@@ -159,13 +159,17 @@
 }
 
 - (void)resizeWebView:(UIWebView *)webView {
+    
+    CGFloat statusHeight = 20.0;
+    CGFloat navHeight = self.navigationController.navigationBar.frame.size.height;
+    CGFloat totalTopBarHeight = statusHeight + navHeight;
+    CGFloat viewWidth = self.view.frame.size.width;
+    CGFloat viewHeight = self.view.frame.size.height;
+    CGFloat textFieldHeight = self.textField.frame.size.height;
+    CGFloat tabBarHeight = self.tabBar.frame.size.height;
+    
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationCurveEaseInOut animations:^{
-        
-        CGFloat statusHeight = 20.0;
-        CGFloat navHeight = self.navigationController.navigationBar.frame.size.height;
-        CGFloat totalTopBarHeight = statusHeight + navHeight;
-        CGFloat viewWidth = self.view.frame.size.width;
-        CGFloat viewHeight = self.view.frame.size.height;
+     
         
         self.webViewContainer.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + totalTopBarHeight, viewWidth, viewHeight);
         
@@ -175,9 +179,11 @@
     } completion:^(BOOL finished) {
         NSLog(@"resize everything complete");
 
-            self.webView.frame = self.webViewContainer.bounds;
+            self.webView.frame = CGRectMake(self.webViewContainer.frame.origin.x, self.webViewContainer.frame.origin.y - textFieldHeight, self.webViewContainer.frame.size.width, self.webViewContainer.frame.size.height - textFieldHeight);
             self.textField.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.webViewContainer.frame.size.width, self.textField.frame.size.height);
-
+        self.tabBar.frame = CGRectMake(self.webViewContainer.frame.origin.x, CGRectGetMaxY(self.webViewContainer.frame) - (tabBarHeight * 2), viewWidth, tabBarHeight);
+        NSLog(@"tabbar is located at x:%f y:%f", self.tabBar.frame.origin.x, self.tabBar.frame.origin.y);
+        
     }];
     [self.navigationItem.rightBarButtonItem setTitle:@"Reduce"];
     [self.navigationItem.rightBarButtonItem setAction:@selector(reduceWebView:)];
@@ -193,6 +199,8 @@
     //CGPoint framePosition = self.view.frame.origin;
     CGFloat defaultOrigin = CGRectGetMaxX(self.view.frame) - reducedWidth;
     CGFloat webViewContainerPadding = 5.0;
+    CGFloat textFieldHeight = self.textField.frame.size.height;
+    CGFloat tabBarHeight = self.tabBar.frame.size.height;
     
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationCurveEaseInOut animations:^{
     
@@ -201,8 +209,9 @@
     } completion:^(BOOL finished) {
         NSLog(@"reduce animation complete");
         
-        self.webView.frame = CGRectMake(self.webViewContainer.frame.origin.x, self.webViewContainer.frame.origin.y, self.webViewContainer.frame.size.width, self.webViewContainer.frame.size.height);
+        self.webView.frame = CGRectMake(self.webViewContainer.frame.origin.x, self.webViewContainer.frame.origin.y - textFieldHeight, self.webViewContainer.frame.size.width, self.webViewContainer.frame.size.height - textFieldHeight);
         self.textField.frame = CGRectMake(self.webViewContainer.frame.origin.x, self.webViewContainer.frame.origin.y, self.webViewContainer.frame.size.width - webViewContainerPadding, self.textField.frame.size.height);
+        self.tabBar.frame = CGRectMake(self.webViewContainer.frame.origin.x, CGRectGetMaxY(self.webViewContainer.frame), self.webViewContainer.frame.size.width - webViewContainerPadding, tabBarHeight);
         
         [self.webViewContainer insertSubview:self.webView atIndex:0];
         [self.webViewContainer insertSubview:self.textField aboveSubview:self.webView];
