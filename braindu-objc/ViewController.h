@@ -10,17 +10,23 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *fullScreenButton;
+
 @property (strong, nonatomic) IBOutlet UIView *nodeContainer;
 @property (weak, nonatomic) IBOutlet UIImageView *nodeImageRectLandscape;
 @property (weak, nonatomic) IBOutlet UILabel *nodeLabel;
+@property (strong, nonatomic) IBOutlet UIView *webViewContainer;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UITextField *textField;
+@property (strong, nonatomic) IBOutlet UIImageView *searchIconImage;
 
+@property (strong, nonatomic) IBOutlet UITabBar *tabBar;
 @property (strong, nonatomic) IBOutlet UITabBarItem *backButton;
 @property (strong, nonatomic) IBOutlet UITabBarItem *forwardButton;
 @property (strong, nonatomic) IBOutlet UITabBarItem *reloadButton;
 @property (strong, nonatomic) IBOutlet UITabBarItem *stopButton;
 
+- (IBAction)fullscreenWebViewWasPressed:(id)sender;
 
 @end
 

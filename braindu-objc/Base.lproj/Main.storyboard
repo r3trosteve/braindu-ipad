@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ugx-Bg-nQj">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
@@ -49,17 +48,17 @@
                                         <rect key="frame" x="6" y="655" width="331" height="49"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <items>
-                                            <tabBarItem title="" image="back-32.png" selectedImage="back-32.png" id="feu-1i-dhZ">
+                                            <tabBarItem title="" image="back-32.png" id="feu-1i-dhZ">
                                                 <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                                             </tabBarItem>
-                                            <tabBarItem title="" image="forward-32.png" selectedImage="forward-32.png" id="d5o-SF-q3e">
+                                            <tabBarItem title="" image="forward-32.png" id="d5o-SF-q3e">
                                                 <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                                                 <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-8"/>
                                             </tabBarItem>
-                                            <tabBarItem title="" image="reload-32.png" selectedImage="reload-32.png" id="afH-0O-OWh">
+                                            <tabBarItem title="" image="reload-32.png" id="afH-0O-OWh">
                                                 <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                                             </tabBarItem>
-                                            <tabBarItem title="" image="delete_sign-32.png" selectedImage="delete_sign-32.png" id="LTn-RE-P8T">
+                                            <tabBarItem title="" image="delete_sign-32.png" id="LTn-RE-P8T">
                                                 <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                                             </tabBarItem>
                                         </items>
@@ -68,6 +67,9 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search-512.png" translatesAutoresizingMaskIntoConstraints="NO" id="eVu-Ls-2HQ">
                                         <rect key="frame" x="11" y="7" width="30" height="29"/>
                                     </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="e1s-TV-DCg">
+                                        <rect key="frame" x="293" y="12" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -75,19 +77,30 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Braindu" id="Wgi-vK-zUA"/>
+                    <navigationItem key="navigationItem" title="Braindu" id="Wgi-vK-zUA">
+                        <barButtonItem key="rightBarButtonItem" image="back-32.png" style="plain" id="kmd-Fg-v6a">
+                            <connections>
+                                <action selector="fullscreenWebViewWasPressed:" destination="BYZ-38-t0r" id="XHQ-nF-Ojq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="e1s-TV-DCg" id="hEO-gr-qMb"/>
                         <outlet property="backButton" destination="feu-1i-dhZ" id="1Rm-J8-7ti"/>
                         <outlet property="forwardButton" destination="d5o-SF-q3e" id="rPF-x6-pcB"/>
+                        <outlet property="fullScreenButton" destination="kmd-Fg-v6a" id="XqQ-Nf-uu6"/>
                         <outlet property="nodeContainer" destination="gyU-fI-rWt" id="fyF-YS-UEb"/>
                         <outlet property="nodeImageRectLandscape" destination="orC-a5-qSC" id="8QI-oE-rUe"/>
                         <outlet property="nodeLabel" destination="9tn-NV-4w3" id="Ecl-Jp-xIV"/>
                         <outlet property="reloadButton" destination="afH-0O-OWh" id="Qu6-CU-lYc"/>
+                        <outlet property="searchIconImage" destination="eVu-Ls-2HQ" id="Tfb-DW-AoR"/>
                         <outlet property="stopButton" destination="LTn-RE-P8T" id="8ls-op-MoR"/>
+                        <outlet property="tabBar" destination="75Q-6j-GWd" id="Pt1-Fd-bAa"/>
                         <outlet property="textField" destination="0UV-fg-0LA" id="8AX-qB-Zum"/>
                         <outlet property="webView" destination="BUI-WN-Xlh" id="wQJ-Tp-d9n"/>
+                        <outlet property="webViewContainer" destination="nej-JN-68S" id="M9r-ib-OgB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -110,7 +123,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9KK-lK-60g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-126" y="383"/>
+            <point key="canvasLocation" x="-106" y="96"/>
         </scene>
     </scenes>
     <resources>
