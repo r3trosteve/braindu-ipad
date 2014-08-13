@@ -35,6 +35,7 @@
 		0C682521199AB336003D5459 /* UIView+ZSViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C68251E199AB336003D5459 /* UIView+ZSViewAdditions.m */; };
 		0C682522199AB336003D5459 /* UIGestureRecognizer+DraggingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C682520199AB336003D5459 /* UIGestureRecognizer+DraggingAdditions.m */; };
 		0C682525199AB51E003D5459 /* BUChartAreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C682524199AB51E003D5459 /* BUChartAreaViewController.m */; };
+		0CEA25C4199BBDA500F5399F /* BUChartPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEA25C3199BBDA500F5399F /* BUChartPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		0C682520199AB336003D5459 /* UIGestureRecognizer+DraggingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+DraggingAdditions.m"; sourceTree = "<group>"; };
 		0C682523199AB51E003D5459 /* BUChartAreaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUChartAreaViewController.h; sourceTree = "<group>"; };
 		0C682524199AB51E003D5459 /* BUChartAreaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChartAreaViewController.m; sourceTree = "<group>"; };
+		0CEA25C2199BBDA500F5399F /* BUChartPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUChartPickerViewController.h; sourceTree = "<group>"; };
+		0CEA25C3199BBDA500F5399F /* BUChartPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChartPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +227,8 @@
 				0C5C47BA1998FAA60031D603 /* ViewController.m */,
 				0C682523199AB51E003D5459 /* BUChartAreaViewController.h */,
 				0C682524199AB51E003D5459 /* BUChartAreaViewController.m */,
+				0CEA25C2199BBDA500F5399F /* BUChartPickerViewController.h */,
+				0CEA25C3199BBDA500F5399F /* BUChartPickerViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 				0C68250E199A69CC003D5459 /* BUDataSource.m in Sources */,
 				0C5C47BB1998FAA60031D603 /* ViewController.m in Sources */,
 				0C682511199A735F003D5459 /* BUChart.m in Sources */,
+				0CEA25C4199BBDA500F5399F /* BUChartPickerViewController.m in Sources */,
 				0C5C47B81998FAA60031D603 /* braindu_objc.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

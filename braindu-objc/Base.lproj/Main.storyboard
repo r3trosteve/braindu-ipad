@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ugx-Bg-nQj">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
@@ -69,6 +70,11 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Braindu" id="Wgi-vK-zUA">
+                        <barButtonItem key="leftBarButtonItem" title="Charts" id="H9j-4D-b1g">
+                            <connections>
+                                <action selector="chooseChartButtonTapped:" destination="BYZ-38-t0r" id="e7D-qV-FLp"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="back-32.png" style="plain" id="kmd-Fg-v6a">
                             <connections>
                                 <action selector="fullscreenWebViewWasPressed:" destination="BYZ-38-t0r" id="XHQ-nF-Ojq"/>
@@ -125,20 +131,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="1036" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7i-Oa-95L">
-                                <rect key="frame" x="60" y="55" width="200" height="200"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.23529411759999999" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lp6-gp-xvp">
-                                <rect key="frame" x="60" y="395" width="237" height="214"/>
+                                <rect key="frame" x="39" y="147" width="237" height="214"/>
                                 <color key="backgroundColor" red="1" green="0.50980392159999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mwu-BC-AKj">
-                                <rect key="frame" x="318" y="252" width="259" height="235"/>
+                                <rect key="frame" x="34" y="406" width="259" height="235"/>
                                 <color key="backgroundColor" red="0.2470588235" green="0.66274509800000003" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7i-Oa-95L">
+                                <rect key="frame" x="329" y="270" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.23529411759999999" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Irw-kM-lIH">
-                                <rect key="frame" x="337" y="65" width="154" height="167"/>
+                                <rect key="frame" x="299" y="33" width="154" height="167"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nodeImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="81N-24-Za0">
                                         <rect key="frame" x="-3" y="0.0" width="160" height="101"/>
@@ -156,7 +162,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMP-ia-JyZ">
-                                <rect key="frame" x="0.0" y="647" width="238" height="57"/>
+                                <rect key="frame" x="97" y="608" width="238" height="57"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>

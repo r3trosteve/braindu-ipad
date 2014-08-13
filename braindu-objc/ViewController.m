@@ -13,6 +13,7 @@
 #import "BUCard.h"
 
 
+
 @interface ViewController () <UIWebViewDelegate, UITextFieldDelegate>
 
 @property (nonatomic, assign) NSUInteger frameCount;
@@ -266,6 +267,33 @@
     }
 }
 
+-(IBAction)chooseChartButtonTapped:(id)sender
+{
+    if (_chartPicker == nil) {
+        //Create the ColorPickerViewController.
+        _chartPicker = [[BUChartPickerViewController alloc] initWithStyle:UITableViewStylePlain];
+        
+        //Set this VC as the delegate.
+        _chartPicker.delegate = self;
+    }
+    
+    if (_chartPickerPopover == nil) {
+        //The color picker popover is not showing. Show it.
+        _chartPickerPopover = [[UIPopoverController alloc] initWithContentViewController:_chartPicker];
+        [_chartPickerPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender
+                                    permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    } else {
+        //The color picker popover is showing. Hide it.
+        [_chartPickerPopover dismissPopoverAnimated:YES];
+        _chartPickerPopover = nil;
+    }
+}
+
+#pragma mark - ChartPickerDelegate method
+
+- (void) selectChart:(BUChart *)newChart {
+   // _nameLabel.text = newChart.name;
+}
 
 
 @end
